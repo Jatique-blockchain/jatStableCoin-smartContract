@@ -449,7 +449,7 @@ contract JatEngine is ReentrancyGuard, Ownable {
         }
 
         uint256 timeInSeconds = block.timestamp - startTime;
-        uint256 secondsInPeriod = isTestMode ? 365 : 365 * 24 * 60 * 60; // Use 365 seconds for test mode
+        uint256 secondsInPeriod = isTestMode ? 3600 : 365 * 24 * 60 * 60; // Use 365 seconds for test mode
 
         UD60x18 principalUD = UD60x18.wrap(principal);
         UD60x18 rateUD = UD60x18.wrap(_interestRate * 1e16);
